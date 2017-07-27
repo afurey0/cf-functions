@@ -4,7 +4,7 @@
 Similar to arrayMap and structMap, except that it recurses into the given struct or array. Can handle structs or arrays that contain combinations of structs, arrays, and simple values. Anything that is not a struct, array, or simple value is not touched by the map function and will be left intact.
 
 ### Usage
-`myMappedStructOrArray = recursiveMap(myStructOrArray, myMapCallback);`
+`myMappedStructOrArray = recursiveMap(myStructOrArray, function(currentValue, keyOrIndex, fullObject) { ... });`
 
 ### Example
 ```coldfusion
