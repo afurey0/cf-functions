@@ -1,3 +1,4 @@
+<cfscript>
 function recursiveMap(object, callback) {
   function _recursiveMap(value, index, full) {
     if (isSimpleValue(value)) {
@@ -16,3 +17,4 @@ function recursiveMap(object, callback) {
   }
   return _recursiveMap(object);
 }
+</cfscript>
