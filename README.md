@@ -27,4 +27,4 @@ Similar to arrayMap and structMap, except that it recurses into the given struct
 	
 </cfscript>
 ```
-End result for `myComplicatedStruct` is `{"f":"b","b":["b","f","f"],"f":{"b":"o","r":["n","z","r"]}};`
+End result for `myComplicatedStruct` is `{"f":"b","b":["b","f","f"],"f":{"b":"o","r":["n","z","r"]}}`
