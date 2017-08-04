@@ -1,9 +1,9 @@
 # cf-functions
 
 ## queryToStruct
-Takes a query result set object and returns a struct representation of the data. Supports the three query serialization layouts used by ColdFusion's serializeJSON method: (1) normal, (2) by column, and (3) as an array of structs. By default, the function also uses the query meta data to attach type meta data to the generated arrays and structs. This allows the ColdFusion deserializeJSON function to maintain consistent types for data fields.
+Takes a query result set object and returns a struct representation of the data. Supports the three query serialization layouts used by ColdFusion's serializeJSON method: (1) normal, (2) by column, and (3) as an array of structs. By default, the function also uses the query's meta data to attach corresponding meta data to the generated arrays and structs. This allows the ColdFusion deserializeJSON function to maintain consistent types for data fields.
 
-[Read more about serialization meta data in ColdFusion](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html\#structserialization)
+[Read more about serialization meta data in ColdFusion](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html\#structserialization.)
 
 ### Usage
 `queryToStruct(myQuery, byColumn, setMetaData)`
