@@ -5,6 +5,7 @@ Takes a query result set object and returns a struct representation of the data.
 
 ### Usage
 `myStruct = queryToStruct(myQuery, byColumn, setMetaData)`
+
 | Argument | Type | Flags | Description |
 | --- | --- | --- | --- |
 | myQuery | query | Required | The query object to convert into a struct |
