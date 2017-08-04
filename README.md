@@ -12,6 +12,17 @@ Takes a query result set object and returns a struct representation of the data.
 | byColumn | boolean\|string | Optional | If true, use the column-style format. If false, use the normal format. If "struct", format as an array of structs. Default: false. |
 | setMetaData | boolean | Optional | Whether or not to set the meta data for the generated structs an arrays using the query's meta data. Default: true. |
 
+### Example
+```coldfusion
+<cfquery name="qData">...</cfquery>
+<cfset badStruct = deserializeJSON(serializeJSON(qData, "struct")) />
+<cfset goodStruct = queryToStruct(qData, "struct") />
+<!--- do stuff with the data... --->
+<cfset badSerialized = serializeJSON(badStruct) />
+<cfset goodSerialized = serializeJSON(goodStruct) />
+```
+In the above example, `badSerialized` may have varying datatypes in the same column (e.g. "002C73" -> "002C73" but "717074" -> 717074)! Plus you have to turn the whole query into a string before turning it into a struct. But for `goodSerialized`, meta data is attached to the generated struct so that it will serialize correctly.
+
 ## recursiveMap
 Similar to arrayMap and structMap, except that it recurses into the given struct or array. Can handle structs or arrays that contain combinations of structs, arrays, and simple values. Anything that is not a struct, array, or simple value is not touched by the map function and will be left intact.
 
