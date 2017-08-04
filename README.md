@@ -4,7 +4,7 @@
 Takes a query result set object and returns a struct representation of the data. Supports the three query serialization layouts used by ColdFusion's serializeJSON method: (1) normal, (2) by column, and (3) as an array of structs. By default, the function also uses the query meta data to attach type meta data to the generated arrays and structs. This allows the ColdFusion deserializeJSON function to maintain consistent types for data fields.
 
 ### Usage
-`myStruct = queryToStruct(myQuery, byColumn, setMetaData)`
+`queryToStruct(myQuery, byColumn, setMetaData)`
 
 | Argument | Type | Flags | Description |
 | --- | --- | --- | --- |
