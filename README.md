@@ -9,7 +9,7 @@ Takes a query result set object and returns a struct representation of the data.
 | Argument | Type | Flags | Description |
 | --- | --- | --- | --- |
 | myQuery | query | Required | The query object to convert into a struct |
-| byColumn | boolean\|string | Optional | If true, use the column-style serialization. If false, use the normal serialization. If "struct", serialize as an array of structs. Default: false. |
+| byColumn | boolean\|string | Optional | If true, use the column-style format. If false, use the normal format. If "struct", format as an array of structs. Default: false. |
 | setMetaData | boolean | Optional | Whether or not to set the meta data for the generated structs an arrays using the query's meta data. Default: true. |
 
 ## recursiveMap
