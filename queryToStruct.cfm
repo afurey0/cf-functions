@@ -1,3 +1,4 @@
+<cfscript>
 function queryToStruct(required query query, any byColumns=false, boolean setMetaData=true) {
 	if (arguments.setMetaData) {
 		local.typeMap = { "CHAR": "string", "VARCHAR": "string", "BINARY": "string", "VARBINARY": "string", "BLOB": "string", "TEXT": "string", "ENUM": "string", "SET": "string", "INT": "numeric", "INTEGER": "numeric", "": "numeric", "SMALLINT": "numeric", "TINYINT": "numeric", "MEDIUMINT": "numeric", "BIGINT": "numeric", "DECIMAL": "numeric", "NUMERIC": "numeric", "FLOAT": "numeric", "DOUBLE": "numeric", "BIT": "numeric", "YEAR": "numeric", "TIMESTAMP": "date", "DATETIME": "date", "DATE": "date", "TIME": "date", "": "string" };
@@ -95,3 +96,4 @@ function queryToStruct(required query query, any byColumns=false, boolean setMet
 	}
 	return local.data;
 }
+</cfscript>
