@@ -16,7 +16,7 @@ Takes a query result set object and returns a struct representation of the data.
 
 ### Caveats
 The following caveats only apply if setMetaData is `true`:
-- To avoid a type error when serializing, blank cells in numeric columns will be replaced by `null` instead of `""`.
+- To avoid a type error when serializing, blank cells in non-string columns will be replaced by `null` instead of `""`.
 - Passing in a query that does not have typed columns (such as one created by `queryNew()` without the `columnTypeList` argument) results in undefined behavior.
 - This function uses an internal data structure to map query column types (varchar, integer, datetime, etc) to ColdFusion types (string, numeric, date, etc). If your database uses types that are not included in that structure, you must add them yourself by modifying the type map struct near the top of the function code.
 
