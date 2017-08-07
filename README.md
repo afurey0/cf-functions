@@ -34,7 +34,7 @@ badSerialized = serializeJSON(badStruct);
 goodSerialized = serializeJSON(goodStruct);
 </cfscript>
 ```
-In the above example, notice that to build `badStruct` we have to turn our query into a JSON string and then convert that into a ColdFusion struct - not exactly efficient. Even worse, `badSerialized` will serialize `"0232"` as `232`, losing the leading "0" and changing the data type from string to integer.
+In the above example, `badSerialized` will serialize `"0232"` as `232`, losing the leading "0" and changing the data type from string to integer.
 
 When `goodStruct` is serialized, the built-in `serializeJSON` function will read the meta data attached by the `queryToStruct` function. This meta data says column 2 is of type varchar, so `"0232"` will be serialized as `"0232"`.
 
