@@ -26,12 +26,12 @@ Other caveats:
 ### Example
 ```coldfusion
 <cfscript>
-qData = queryNew("name,superSecretCode", "varchar,varchar", [["John D", "2E7D"], ["Susie Q", "0232"]]);
-badStruct = deserializeJSON(serializeJSON(qData, "struct"));
-goodStruct = queryToStruct(qData, "struct");
-//do stuff with the data...
-badSerialized = serializeJSON(badStruct);
-goodSerialized = serializeJSON(goodStruct);
+	qData = queryNew("name,superSecretCode", "varchar,varchar", [["John D", "2E7D"], ["Susie Q", "0232"]]);
+	badStruct = deserializeJSON(serializeJSON(qData, "struct"));
+	goodStruct = queryToStruct(qData, "struct");
+	//do stuff with the data...
+	badSerialized = serializeJSON(badStruct);
+	goodSerialized = serializeJSON(goodStruct);
 </cfscript>
 ```
 In the above example, `badSerialized` will serialize `"0232"` as `232`, losing the leading "0" and changing the data type from string to integer.
